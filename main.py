@@ -1,3 +1,4 @@
+#python3.7.9环境下成功运行
 from MEC_model import *
 from DQN_mf import DeepQNetwork
 import random
