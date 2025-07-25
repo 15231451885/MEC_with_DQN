@@ -4,6 +4,7 @@ import random
 import copy
 import xlwt
 import matplotlib.pyplot as plt
+from datetime import datetime
 
 TASK_NUM = 100
 
@@ -579,5 +580,8 @@ if __name__ == "__main__":
     dqn = DQN()
     dqn.train()
 
-    make_excel("C:/Users/sean-/Desktop/arguments.xls")
-    plot_training_progress("C:/Users/sean-/Desktop/train.png")
+    #获取当前时间
+    current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    make_excel("D:/WZY/codes/MEC_with_DQN/result/arguments_" + current_time + ".xls")
+    plot_training_progress("D:/WZY/codes/MEC_with_DQN/result/train_" + current_time + ".png")
